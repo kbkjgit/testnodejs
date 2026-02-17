@@ -31,7 +31,7 @@ const client = new google.auth.JWT(
         range:'sheet1!a1:q'
     };
     let read_result = await gsheet_api.spreadsheets.values.get(read_opt);     
-    res.send(read_result.data.values[0]);
+    res.send(read_result.data.values);
 
 
 });
@@ -107,3 +107,4 @@ const app = express();
     console.log("server is running ....")
 
 });*/
+
